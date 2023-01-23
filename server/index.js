@@ -5,7 +5,11 @@ const app = express();
 const port = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const cors = require('cors');
-app.use(cors());
+
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+}));
 app.use(express.json());
 
 

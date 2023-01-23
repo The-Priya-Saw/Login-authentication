@@ -2,6 +2,7 @@ const RegisterModel = require("../models/RegisterModel.js");
 const jwt = require("jsonwebtoken");
 
 module.exports.register = async (req, res) => {
+    // console.log(req);
     const name = req.body.name;
     const emailId = req.body.email;
     const password = req.body.password;
